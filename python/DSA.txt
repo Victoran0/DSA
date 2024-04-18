@@ -1,0 +1,323 @@
+An algorithm is a program that solves a problem.
+In python the init is being called automatically everytime the class is being used to create a new object.
+
+the __str__ function controls what should be returned when the class object is represented as a string.
+if it is not set, teh string representation of the object is returned
+
+objects can also contain methods, METHODS in objects are functions that belong to the object.
+del object.value would delete that value of that object
+object.parameter = newValue will modify the value of that object
+
+cheet codes for udacity;
+https://gist.github.com/OlgaBelitskaya/a6cb19e1f3a041e6f6a56ccf58b4701c
+
+Efficiency also called complexity is how well we are using our computer to get a particular job done.
+we can measure this with space and time
+How long the code takes to run and how much storage space we need.
+Study more; Time efficiency, space efficiency.
+
+Order of growth is how the time of execution depends on the length of the input.
+Order of growth will help to compute the running time with ease.
+sort() is used to arrange the items in an array and can be used either in ascending or descending order.
+
+
+Range(start, stop, step), by default, it starts at 0, step by 1 and stop at what number we specify in there
+
+Stacks:
+Push is used to add a new item to the stack, pop is used to remove an item from the stack.
+last in first in, i.e the most recent item we pushed into the stack is tbe one that would be ppped if we are removing any item from it.
+
+Below is a systematic strategy we would apply for solving problems;
+1 State the problem clearly identify the input and output format
+2 Come up with some example inputs and outputs.Try to cover all edge cases
+3 Come up with a correct solution for the problem, state it in plain english.
+4 Implement the solution and test it using examples inputs. Fix bugs, if any.
+5 Analyze the algorithms complexity and identify inefficiencies, if any.
+6 Apply the right technique to overcome the inefficiency. Repeat step 3-6
+
+Name your function appropriately and think carefully about the signature.
+Use descriptive variable names, otherwise you may forget what a variable represents.
+
+Discuss the problem with the interviewer if you are unsure how to frame it in abstract terms.
+
+Edge cases or extreme examples, using the locate card problem;
+The array we are trying to locate a card in could be an empty array
+And it may contain only that card which is the card we are looking for
+And the number we are looking for may not be in that array.
+These are the edge cases for the problem
+
+Test cases and edge cases help, because sometimes, we may not know how to approach a problem or what to do. But with these test cases, after outlining them, we would understand better
+Dont stress it, add more test cases as you discover them
+
+The simplest or most obvious solution which  involves checking all possible answers is called the brute force solution.
+
+A while true is a loop that is continuously True and therefore runs endlessly.
+
+To help test the function easily, the jovian python library provides a helper function
+evaluate_test_func
+We can use the evaluate_test_cases plural to test all cases with a single line of code
+
+In a real interview or coding assessment, you can skip the step of implementing and testing the brute force solution in the interest of time.
+It's generally quite easy to figure out the complexity of the brute force solution from the plain english description.
+
+The field of study concerned with finding the amount of time, space or other resources required to complete the execution of computer programs is called analysis of algorithms
+The process of figuring the best algorithm to solve a given problem is called algorithm design and optimization.
+
+Complexity of an algorithm is a measure of the amount of time and/or space required by an algorithm for an input of a given size e.g N
+Unless otherwise stated, the term complexity always refer to the worst case complexity, i.e the highest possible time/space taken by the program/algorithm to process an input.
+It is sometimes also called the running time of the algorithm
+
+Understand time complexity and scaling
+
+Using _ in our loops is good when we are not using the value of the variable.e.g [[] for _ in range(10)]
+
+This is how we create infinity in python [float('inf')]
+
+If a problem is about something sorted, it is probably binary search problem
+BACKTRACKING
+
+We can use the [::-1] to reverse a list in python
+
+THe .replace syntax changes a value whenever such value is sent to our given variable, e.e;
+s = s.replace('IV', 'IIII').replace('IX', 'VIIII').replace('XL','XXXX').replace('XC', 'LXXXX').replace('CD','CCCC')
+
+Instead of using += for strings, we can use the stringbuilder, i.e .join, for example, we have;
+str1 = "cap"
+str2 = "super Hat"
+str4 = []
+for i in str2:
+    str4.append(i)
+    str3 = "".join(str4)
+
+Using range on index of a list, we start from range 1 so we can do i-1 as 0
+
+using string slicing, if we use [::2} we would get the elements in the list at every from the start position and jump every1 position
+[4:10:2] would start from the 4th position and jump every 1 position, i.e index 4, 6, 8, 10 it would stop at the end index
+[::] would print every element in the list
+
+We can use the array.sort() syntax to sort an array easily
+
+if we want to assign a variable to a value and want another variable ot carry the same value form the first one, we can sat s = t = listNode() for example
+
+The python Counter is a built in python module that count the amount fo times a element occur in a array or string or dict etc.
+to use it, we first import it by saying from collections import Counter, then we pass in the variable we want to diagnose
+i.e Counter(var)
+
+The .remove function remove an element from a python list etc
+The remove without an index is more efficient than the pop
+
+import bisect
+the bisect algorithm function is to find a position in list where an elemnt need to be inserted to keep the list sorted
+bisect(list, num, beg, end) : this returns the position to the most right where the num arg would be placed in the sorted lsit
+bisect_left(list, num, beg, end): this returns the position to the most left where the num arg would be in the sorted list
+e.g bisect.bisect(list, int) or bisect.bisect_left(list, int)
+insort works like bisect
+
+import re
+re.split would return chunks split, i.e cut out the element it is splitting with if it finds much of them
+i.e if we have;
+str = "   fly me   to   the moon  "
+str2 = re.split(' +', str)
+this would split additional ' ' where it finds them
+
+there is also a str.split('splitBy') which would split where it finds the split by only once.
+
+We can use the int() to convert a string of numbers into an actual integer
+WE can use str() to convert an integer into a string
+we can use the map(str, integer) to change an integer to a string. This is useful esp when using the ''.join on int
+
+The int function takes two arguments, int(number, base)
+
+The bin() function can be used to add two binary numbers
+
+We can use else with a while statement, which would terminate the loop when the action under the loop is no longer satisfied
+
+the sort function takes arguments and one of them is sort(reverse=True) which would sort the element in descending
+
+% is the modular division in python, i.e to find the remainder after dividing
+
+using multiple whiles instead of while if else is faster
+
+A Deque is a double ended list. It is implemented in python using the module "collections"
+from collections import deque
+append() is used to add an element at the right end of the deque
+appendleft() is used to add an element at the left end of the deque
+pop() is used to delete an element from the right end of the deque
+popleft() is used to delete an element from the left end of the deque
+index(ele, beg, end) this function returns the first index of the element mentioned in arg,
+starting searching from beginning to end index
+insert(i,a) this function inserts the value a at index i
+remove(a) this function removes the first occurence of a in the deque
+count(a) this function counts the ammount of time a occurs in the deque
+
+we can use arrStr = [i for i in str] and it would return an array of each letter in str
+we cna also use list(str)
+Also, sorted(str) would sort str and put each letter in a list as an element
+
+we can use the mapS[list(mapS.keys())[0]] to get the first key of mapS and also,
+we can use the 0 value as i to loop through all keys..
+
+from itertools import zip_longest
+zip_longest( iterable1, iterable2, fillval)
+
+The sum() function returns the sum of the elements in an array
+the spliced version of an array can be used also
+It takes a second argument which is the start number of the addtion, initially,
+it is 0 except stated otherwise
+
+bin(num) would convert num to a binary number, we can use [2:} to get the
+exact binary num without 0b
+
+We can use the set((i for i in ans)) ro construct a set in python
+
+We can use the arr.index(element) to get the index of that element in arr
+
+When we use the counter on two different variables or strings, lets say count1 for var 1 and count2 for var2,
+count1 & count2 would give the result of the similarity between both counters.
+
+We can reeverse a list list[::-1] and find the index of an element, list.index(element) to get the last index of that
+Element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+We can also use the breadth first search to find out if all the nodes in a graph are connected.
+
+WHen finding the shortest path, if we do not have weights in the graph, then the shortest can be found by performing
+breadth first search.
+We there are weights no involved, then we can be concerned abut the length of the paths, the numbers of nodes in each path
+we need to have a directed graph, we can do this with an undirected graph too.
+If it have weights, breadth first search alone may not be enough.
+
+The complexity of breadth first search is o(n+m)
+
+Shortest path can be asked in some really hard interviews, so we can learn it also
+

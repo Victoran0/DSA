@@ -1,0 +1,64 @@
+_ in range makes the loop run alot of times until the condition inside it has been met.
+
+The divide and conquer procedure:
+1. Divide the inputs into two roughly equal parts.
+2. Recursively solve the problem individually for each of the two parts.
+3. Combine the results to solve the problem for the original inputs.
+4. Include terminating conditions for small or indivisible inputs.
+
+Insertion Sort
+This is another simple sorting technique, where we keep the initial portion of the array sorted and insert the remaining
+elements one by one at the right position.
+
+Explaining the insertion sort algorithm;
+First we duplicate the list, so we do not change the initial list sent.
+Then we loop through every position in the duplicated list
+We would take out an element at a random position, and also check the element that
+comes before the one we take out
+While the position of the element that comes before the one we take out is
+greater or equal to zero
+And the element at this position is greater than the one we take out, we keep going
+down the list, i.e the next position we are checking for would be the one before the present one etc.
+Then we insert the this element to the position where the one we removed before is
+and also re insert the removed element
+The loop would keep running until the list is sorted.
+
+ANd the insertion sort is quite faster than the bubble sort.
+
+Merge sort:
+1. If the input list is empty or contains just one element, it is already sorted.
+Return it.
+2. If not, divide the list of numbers into two roughly equal parts.
+3. Sort each part recursively using the merge sort algorithm. You will get back two
+sorted lists.
+4. Merge the two sorted lists to get a single sorted list
+
+Quick sort:
+1. If the list is empty or has just one element, return it, its already sorted
+2. Pick a random element form the list. This element is called a pivot.
+3. Re order the list so that all teh elements with values less than or equal to the
+pivot come before the pivot, while all elements with values greater than the pivot
+come after it. This operation is called partitioning.
+4. The pivot element divides the array into two parts which can be sorted independently
+by making a recursive call to quicksort.
+
+The time complexity of bubble sort is O(n^2) which is also known as wuadratic complexity
+The space complexity is O(n)
+
+The time complexity of merge sort is O(n log n)
+The space complexity of merge sort is O(n)
+THe avg time complexity of quicksort is O(n log n) and the worst case comp is O(n^2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

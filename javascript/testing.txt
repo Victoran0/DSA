@@ -1,0 +1,17 @@
+if n <=3 return true
+if n>3 and n<= 6, return false
+if n % 6 is greater than 3, return false, else true
+
+
+play optimally;
+if n = 4, i take 1-3, friend takes the last one and friend win
+
+if n=5, i take 1, remaining 4, friend takes 1-3, i take either of the last and i win
+
+if n=6, i take 2, remaining 4, friend takes 1-3 and i wan
+
+if n=7, i take 3, remaining 4, friend takes 1-3, i win
+
+if n = 8, i take 3, friend take 1, remainder 4, friend wins
+
+if n=9, i take 1, friend take 1, remainder 6, i win 

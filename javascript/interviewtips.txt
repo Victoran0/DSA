@@ -1,0 +1,146 @@
+stacks
+
+Stacks are last in first in type of service
+
+The functins provided for stacks are push; for pushing data into a stack, pop; for removing the latest element from the stack, peek for displaying the top element of a stack and length for determining the size or how many elements are on the stack
+The javascript, the array object already have all the functions we need to use it as a stack, so we could just use an array as a stack
+
+ 
+Below is a systematic strategy we would apply for solving problems;
+1 State the problem clearly identify the input and output format
+2 Come up with some example inputs and outputs.Try to cover all edge cases
+3 Come up with a correct solution for the problem, state it in plain english.
+4 Implement the solution and test it using examples inputs. Fix bugs, if any.
+5 Analyze the algorithms complexity and identify inefficiencies, if any.
+6 Apply the right technique to overcome the inefficiency. Repeat step 3-6
+
+
+With the syntax arr.indexOf(element), we can get the index of an element in that array
+
+The splice function is used as so Below
+splice(start index, amount of elemnt to delete, item 1 to add, item 2, etc)
+
+slice(start index, stop index)
+the slice would split an array at the given index passed into the function, i.e arr.slice(0, 5) will return a new array of arr from index 0-5. The default end index is the length of arr, i.e arr.slice(5) would return a new array from the fifth index of arr to the end of arr
+
+in-place algorithm means without making a duplicate of any of its data structure, i.e without ho helper DS
+
+
+THe indexing an array by -1 from the end to the start we use in python does not work in jS!!!
+
+We can use the str.split(' ') to split a string by spaces in it, we can also use the str.split(/\s+/) to split a string if it has multiple space in it 
+Also we can use the str.trim().split(/\s+/) to split the string with multiple spaces and also trim out all elements in the new array that might be a ''
+
+array.every(val => val === array[0]) we use this to check if every value in an array is the same
+array.forEach(element => element === array[0]) we can use the forEach function also to check lot of things concerning an array
+
+Array.from(String(num), Number) would convert a number into an array. Also, Array.from(String(num)) would convert the num into an array where each integer num will be a string.
+
+The BigInt converts a string of large numbers to a list of numbers, and works fine for smaller numbers also.
+
+The num.toString() would convert any number to a string
+THe toString() can take an argument for the base of an integer when we are dealing with binary numbers
+
+The array.join()
+('') would join every element in an array and make them 1 element which would then be a string, we can pass in anything in the '' which would then split the element by that or we pass nothing, not even the '' then, it joins the elements in the array, even with teh , they were divided by.
+
+the parseInt would convert a string of number to an integer, the parseFloat works alike they both take two arguments wheret the first is the string to pass and the second is the base of it.
+
+We can concatenate a string of number with 0b, then we pass it in BigInt or other functions for binary iterations
+
+Math.pow(num, raisetopowerof) would raise the power of num to thw given argument raisetopowof
+
+when sorting a large array, we can use the syntax arr.sort(function(a,b) {return a-b})
+
+arr.concat(anotherArr) would return a new array with the elements in both arra and anotherArr
+
+JSON.stringify(object) would convert the object into a string.
+
+Math.max(value1, value2,...,valueN) would return the maximum value
+
+The continue statement terminates execution of the statement in the current iteration of the  current or labeled loop and continue execution of the loop with the next iteration.
+
+return Object.entries(obj).sort((x, y) => y[1] - x[1])[0][0]; will return the key with the highest value in the object, i.e we sort the object based on the value of its key and let the key with the highest value come first
+
+object.values(obj) would return the value for each key in the object in an array.
+object.entries(obj) would return each key and value in the object in seperate arrays and put these arrays in one array.
+
+/[a-zA-Z]/.test(str) would return true if the item in str is a string or not
+
+We can use the i flag to make the expression case insensitive, this would , i.e /[a-z]/i.test(str)
+
+To increment the value of a key in a object, we can easily use the obj[s[idx]] = (obj[s[idx]] || 0) +1 which would add 1 to the value anytime s[idx] is sent to obj again
+
+map helps us select values easily instead of looping
+
+arrar.filter() takes a function which is a test and returns the elements in the array that passes this test
+
+Math.abs() returns the absolute value of the number used on the function
+
+a blanaced binary tree which is also known as height balanced binary tree is a binary tree in which where the difference between the height of the left subtree and the right subtree is not more than one
+
+Math.max.apply(Math, arr) would return the max number in arr
+
+we can use the /[A-Za-z0-9]/.test(str) to check if the input of the strings are either letters in uppercase and lowercases and also numbers
+
+The javascript replace function;
+the replace function takes 2 argument
+string.replace(searchValue, newValue)
+it would replace the searchValue with the newValue
+normally, it would only change on instance of the searchValue but with replace(/searchValue/g, newvalue), it would change it globally case of searchValue sensitive
+and with (/searchValue/gi, newValue), it would change it case insensitive
+
+Using Regular Expressions; /patterns/modifiers
+^ means for elements not in the patterns
+i, case insensitive ; g search for the pattern globally ; m find multiline matching
+/[^a-b]/gi would mean search for elements not a-b case insensitive etc
+
+array.map(element, index)
+
+The array.slice() function takes extra space
+
+The javascript ^ bitwise operator returns a 1 for each bit position for which the corresponding bit of either operands are 1 but not for when the corresponding bit of both operands are 1
+0,0 = 0, 1,1 = 0, 0,1 = 1, 1,0 = 1
+
+Also it is let num of nums not in
+
+String.fromCharCode(num) returns the utf-16 code of that number. 65 upwards are alphabets to 90 are alphabets
+
+ we can use the map[0] = ~~map[0] + 1 to add a value if the element map[0] exists in the map recursively
+
+str.charCodeAt() would return the index of the utf-16 string.
+
+the logical bitwise right shift >>> operator shifts the bit by the number of bits signified in base32, i.e if we have a>>>b, the bits of a would be shifted to the right and replaced by 0 at the left side of it after each shift until we have reached the index of the most significant bit in b, i.e if we have
+a = 10000100101 and b = 00000001000 a would be shifted 4 times to the right and it would become 00001000010
+which is also like a>>>4
+
+we also the arithmetic right shift which would replace the left side by the leftmost bit in a before any shift occur, i.e a >>>b would have been 11111000010
+
+the bitwise left shift would shift it to the left instead, i.e push 0 to the right side and shitft from the left side
+
+working in base10, the bitwise left oerator formula is x << n = x * 2**n
+
+while the rightside shift would divide it and return the most significant vlaue before decimals, i.e x / 2 ** n
+
+The hamming weight is also known as the number of 1 bit a binary number of base 32 has.
+
+The Arr.lastIndexOf(arr[i]) returns the most recent index at which a particular element is seen in an the array
+
+arr.charAt(index) returns the element at the position index
+In Linked list algorithms, we use different pointers so we do not alter the value of the head and the head.next while we perform our reformation
+
+When working with sets in javascrpit, a set can not contain duplicate values, also we check the length of a set by using the set.size property
+
+we can use the of operator with a for loop
+
+In javascript we can use the in operator to check if an element exist in an array or obj
+
+we can use JSON.stringify(arr1) == JSON.stringify(arr2) to check if 2 arrays are equal\
+but for loop of each index works best
+
+The array.includes(arg) function returns true if  array contains the given arg
+
+We can use the [...new Set(arr)] to convert an array into a set in the array [ format]
+
+
+str.split(',') the string.split method can convert a string into an array by cutting for the next element by the selector specified in the ('')

@@ -1,0 +1,25 @@
+Below is a systematic strategy we would apply for solving problems;
+1 State the problem clearlym identify the input and output format
+2 Come up with some example inputs and outputs.Try to cover all edge cases
+3 Come up with a correct solution for the problem, state it in plain english.
+4 Implement the solution and test it using examples inputs. Fix bugs, if any.
+5 Analyze the algorithms complexity and identify inefficiencies, if any.
+6 Apply the right technique to overcome the inefficiency. Repeat step 3-6
+
+
+
+If interviewers do not give you examples, ask them
+
+We read to understand the problem. analyze our input and output format
+
+If you are not having any ideas, talk with the interviewer, they should give you a hint.
+
+
+we can list out all the test cases in words, We do not need to create the actual input/output test cases in an interview
+
+Whenever you are in doubt, think about recursion, think if there is a way to solve the problem recursively, which means
+can you reduce the overall problem to a combination of one or more sub problem
+
+Copying and pasting takes memory allocation[taking from one and passing to another]
+
+we can print our results per steps for more clarity

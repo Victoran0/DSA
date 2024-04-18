@@ -1,0 +1,12 @@
+THe time complexity is O(2^m+n)
+in our function, we can see that some results are re-occuring.
+WE can simply remember our results, this technique is called memoization
+We remember this solutions in our dictionary called memo
+
+WE can create zeros 0 in a list by coding;
+[0 for x in range(6)] which would gives us zeros in 6 places
+but [[0 for x in range(5)] for x in range 6] would give us the 0 in rows and columns
+
+The time complexity of the dynamic programming function we implemented is O(n1*n2)
+
+The time complexity of the recursive algorithm is O(2^N)

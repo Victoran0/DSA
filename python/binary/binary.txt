@@ -1,0 +1,99 @@
+We can use binary search for our problem [ref] locateCard, i.e;
+1 Find the middle element of the list
+2 If it matches queried number, return the middle position as the answer
+3 if it is less than the queried number, then search the first half of the list
+4 If it is greater than the queried number then search teh second half of the list
+5 if no more element remain, return -1
+
+Great programmers write baby codes, You should be writing as small pieces of functions and possible and you can call them in other functions etc.
+
+Binary search has a space complexity of O(N) and time complexity(worst case) of O(log N)
+Binary search runs in logarithmic time
+
+General strategy behind binary search(Generic binary search);
+1. Come up with a condition to determine whether the answer lies before, after or at a given position
+2. Retrieve the midpoint and the middle element of the list.
+3. If it is the answer, return the middle position as the answer.
+4. If answer lies before it, repeat the search with the first half of the list.
+5. If the answer lies after it, repeat the search with the second half of the list.
+
+def binary_search(lo, hi, condition):
+    """TODO - add docs"""
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        result = condition(mid)
+        if result == 'found':
+            return mid
+        elif result == 'left':
+            hi = mid - 1
+        else:
+            lo = mid + 1
+    return -1
+
+A Sorted refers to a list where the elements are arranged in increasing order
+
+array.index(value) would give us the index of that value in the array
+
+When trying to solve a problem write down every observation tha tmatches the point of action.
+The point of action is the solution to the problem.
+
+A data structure is something we can define using a class
+
+The moment we are searching for a particular value in an array of length 0-N, our time complexity is of N
+
+Binary search tree:
+It is called a tree because it is vaguely like an inverted tree trunk with branches
+1. THe word 'binary' indicates that each 'node' in the tree can have at most 2 children(left or right)
+2. Nodes can have 0, 1, 2 children. Nodes that do not have any children are sometimes alsoo called 'leaves'
+3. The single node at the top is called the 'root' node, and it is typically where operations like search, insertions
+   etc begins.
+When a binary tree has the middle element at the top, then the 2 nodes under it are the middle elements of the next nodes
+and so on and so forth i.e THe left subtree only contains keys that are lexicographically smaller. than the node's key
+and the right subtree contains nodes that are lexicographically larger than the node's key.
+ If this property is satisfied. it is called a binary search tree.
+
+A binary tree where nodes have both a key and a value is called a map or treemap because it maps keys to values.
+
+When a function calls itself inside it, it is called recursions.
+
+A traversal refers to the process of visiting each node of a tree exactly once. Visiting a node generally refers to
+adding the node's key to a list. There are 3 ways to traverse a binary tree and return the list of visited keys.
+Inorder traversal
+1. Traverse the left subtree recursively inorder
+2. Traverse the current node
+3. Traverse the right subtree recursively inorder
+
+Preorder traversal
+1. We traverse the current node first
+2. Traverse the left subtree recursively preorder
+3. traverse the right subtree recursively preorder
+
+Postorder traversal
+1. Traverse the left subtree recursively left
+2. Traverse the right subtree recursively right
+3. Traverse the current node
+
+The height/depth of a binary tree is defined as the length of the longest path from its root node to a leaf.
+
+The size of a tree is the amount of total elements in the tree
+
+Encapsulation of data and functionality is combining all the functions concerning a parameter into a class.
+
+DRY don't repeat yourself, write small reusable generic functions
+
+A balanced binary tree
+!. Ensure that the left subtree is balanced
+2. Ensure that the right subtree is balanced
+3. Ensure that the difference between heights of left subtree and right subtree is not more than 1
+
+complete binary tree:
+A complete binary tree is a special type of bt where all the levels of the tree are filled completely except the
+lowest level nodes which are filled from as left as possible.
+
+A self balanced BT remains balanced after every insertion and deletion.
+Decades of research have gone into creating self-balancing binary trees, approaches to do this incude;
+B-trees, Red Black Trees and AVL(Adelson Velsky Landis) trees.
+
+THe time complexity of binary search is 0(log N)
+The time complexity to find, insert and update is O(N)
+THe time complexity to list all the element is O(1) and it is O(N) for a BST

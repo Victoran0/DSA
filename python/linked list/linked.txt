@@ -1,0 +1,6 @@
+A linked list is a data structure used for storing a sequence of elements.
+A class is a blueprint for creating objects in python
+To access an object in python, we can easily do so by declaring a variable to its class, e.g
+node1 = Node()
+
+UDACITY

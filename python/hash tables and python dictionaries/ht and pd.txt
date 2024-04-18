@@ -1,0 +1,45 @@
+Dictionaries in python are implemented in python using a data structure called hash table
+
+A hash table uses a list/array to store the key-value pairs, and uses a hashing function to determine the index for
+storing or retrieving the data associated with a given key.
+
+A hashing function is used to convert strings and other non-numeric data types into numbers, which can then be used as
+list indices.
+
+Below is a simple algorithm for hashing which can convert strings into numeric list indices.
+1. Iterate over the string character by character
+2. convert each character to number using python built-in ord function
+3. add the numbers for each character to obtain the hash for the entire string
+4. take the remaining of the result with the size of the data list
+
+The ord function returns the unicode code from a given string of length 1
+
+To insert a key-value pair into a hash table, we can simply get the hash of the key, and insert the pair at the index of
+ its hash in the data_list
+
+Multiple keys can have the same hash, for example: 'listen' and 'silent', this is referred to as collision.
+Data stored against one key may override the data stored against another if they have the same hash.
+
+To handle collisions, we would use a technique called linear probing, how it works is written below:
+1. While inserting a new key-value pair, if the target index for a key is occupied by another key, tehn we try the next
+index, followed by the next and so on till we reach the closest empty location.
+2. While finding a key-value pair, we apply the same strategy, but instead of searching for an empty location, we look
+for a location which contains a key-value pair with the matching key.
+3. While updating a key-value pair, we apply the same strategy, but instead of searching for an empty location, we look
+for a location which contains a key-value pair with the matching key, and update its value.
+
+The hash function returns the hash of the letter that was inputted into it.
+
+The time complexity is O(!) on average and O(N) in the worst case
+
+
+
+
+
+
+
+
+
+
+
+
